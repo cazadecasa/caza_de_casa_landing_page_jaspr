@@ -11,7 +11,7 @@ class App extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: 'flex flex-col bg-surface h-screen lg:min-h-screen', [
-      div(classes: 'flex flex-col lg:flex-row h-[72%] lg:h-full lg:items-center lg:justify-center', [
+      div(classes: 'flex flex-col lg:flex-row h-full lg:h-full lg:items-center lg:justify-center', [
         const ApartmentPhoto(),
         const Intro(),
       ]),

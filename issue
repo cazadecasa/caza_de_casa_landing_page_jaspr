@@ -1,0 +1,44 @@
+**Description**
+
+<!-- A clear and concise description of what the bug is. -->
+
+I've tested the same code on a Jaspr project which makes use of jaspr_tailwind and a separate TailwindCSS project but I am receiving inconsistent behaviour in terms of how the web page looks with Jaspr and how it looks with TailwindCSS
+
+**Jaspr**
+
+<img width="1728" alt="Screenshot 2024-08-05 at 18 32 28" src="https://github.com/user-attachments/assets/a6b0e4b3-727d-40cb-959b-a61e010be06c">
+
+**TailwindCSS**
+
+<img width="1728" alt="Screenshot 2024-08-05 at 18 32 30" src="https://github.com/user-attachments/assets/998b2d36-d038-4426-b396-59ec8b9e0635">
+
+
+**Steps To Reproduce**
+
+<!-- Please include full steps to reproduce so that we can reproduce the problem. -->
+
+
+
+**Doctor Output**
+
+<!-- Please run `jaspr doctor` and paste the output below. -->
+
+```
+  • Dependencies on core packages:
+    • jaspr: ^0.13.3
+    • jaspr_builder: ^0.13.3 (dev)
+    • jaspr_tailwind: ^0.2.0 (dev)
+  • Rendering mode: static
+  • Uses jaspr compilers: false
+  • Uses flutter embedding: false
+```
+
+**Expected Behavior**
+
+<!-- A clear and concise description of what you expected to happen. -->
+
+I should see the same responsive design as the TailwindCSS project
+
+**Additional Context**
+
+<!-- Add any other context about the problem here. -->

@@ -7,23 +7,23 @@ class Intro extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield section(
       classes:
-          'order-2 lg:order-1 flex flex-col h-[55%] lg:w-1/2 lg:content-center lg:justify-center lg:items-center',
+          'order-2 flex flex-col grow content-center justify-center lg:order-1 lg:w-1/2 lg:content-center lg:justify-center lg:items-center',
       [
-        div(classes: 'flex flex-col flex-grow mb-4 px-16 text-center lg:px-0 lg:flex-grow-0', [
-          div(classes: 'flex flex-col flex-grow justify-center items-center', [
-            p(classes: 'text-9xl font-extralight lg:text-8xl', [Text('33')]),
-            p(classes: 'text-7xl font-medium tracking-wider mt-4 lg:text-5xl', [
-              Text('Apartments in Medellín'),
+        div(classes: 'flex flex-col flex-grow mb-4 px-5 text-center lg:px-0 lg:flex-grow-0', [
+          div(classes: 'flex flex-col flex-grow justify-center items-center mt-3', [
+            p(classes: 'text-5xl font-extralight lg:text-8xl', [text('33')]),
+            p(classes: 'text-3xl font-medium tracking-wide mt-2 lg:text-5xl', [
+              text('Apartments in Medellín'),
             ]),
-            p(classes: 'text-4xl mt-8 lg:text-2xl', [
-              Text('We charge zero fees. You get the best prices.'),
+            p(classes: 'text-sm mt-2 lg:text-2xl', [
+              text('We charge zero fees. You get the best prices.'),
             ])
           ]),
-          div(classes: 'flex flex-col flex-grow justify-center items-center', [
+          div(classes: 'flex flex-col flex-grow justify-center items-center mt-4 lg:mt-12', [
             button(
               classes:
-                  'btn rounded-full bg-white text-black w-2/3 h-24 text-3xl lg:h-14 lg:w-1/2 lg:text-xl',
-              [Text('JOIN WAITLIST')],
+                  'btn rounded-full bg-white text-black w-[72%] h-10 text-sm lg:h-14 lg:w-1/2 lg:text-xl',
+              [text('JOIN WAITLIST')],
             ),
           ]),
         ]),

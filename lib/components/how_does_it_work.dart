@@ -5,31 +5,33 @@ class HowDoesItWork extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    final size = 28;
+    final textClasses = 'text-sm mt-3';
     yield section(classes: 'flex flex-col h-[28%] bg-white items-center justify-center lg:hidden', [
       p(
-        classes: 'flex flex-grow text-4xl font-medium items-center',
+        classes: 'flex flex-grow text-lg font-medium items-center',
         [Text('How does it work?')],
       ),
       div(classes: 'flex flex-grow flex-row w-full', [
         div(
           classes: 'flex flex-col flex-grow items-center',
           [
-            img(height: 64, width: 64, src: 'images/search.png'),
-            p(classes: 'text-2xl mt-3', [Text('Find a property')])
+            img(height: size, width: size, src: 'images/search.png'),
+            p(classes: textClasses, [Text('Find a property')])
           ],
         ),
         div(
           classes: 'flex flex-col flex-grow items-center',
           [
-            img(height: 64, width: 64, src: 'images/chat.png'),
-            p(classes: 'text-2xl mt-3', [Text('Message the owners')])
+            img(height: size, width: size, src: 'images/chat.png'),
+            p(classes: textClasses, [Text('Message the owners')])
           ],
         ),
         div(
           classes: 'flex flex-col flex-grow items-center',
           [
-            img(height: 64, width: 64, src: 'images/hand-shake.png'),
-            p(classes: 'text-2xl mt-3', [Text('Agree a deal')])
+            img(height: size, width: size, src: 'images/hand-shake.png'),
+            p(classes: textClasses, [Text('Agree a deal')])
           ],
         ),
       ]),
