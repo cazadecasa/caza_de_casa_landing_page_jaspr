@@ -7,7 +7,7 @@ class Intro extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield section(
       classes:
-          'order-2 flex flex-col grow content-center justify-center lg:order-1 lg:w-1/2 lg:content-center lg:justify-center lg:items-center',
+          'order-2 flex flex-col grow content-center justify-center lg:order-1 lg:w-[47%] lg:content-center lg:justify-center lg:items-center',
       [
         div(classes: 'flex flex-col flex-grow mb-4 px-5 text-center lg:px-0 lg:flex-grow-0', [
           div(classes: 'flex flex-col flex-grow justify-center items-center mt-3', [

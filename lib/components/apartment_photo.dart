@@ -5,7 +5,7 @@ class ApartmentPhoto extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield section(classes: 'order-1 lg:order-2', [
+    yield section(classes: 'order-1 lg:order-2 lg:w-[53%] lg:px-12', [
       img(
         src: 'images/a-smaller.jpeg',
         alt: 'Medellín apartment',
