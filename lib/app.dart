@@ -1,22 +1,67 @@
-import 'package:caza_de_casa_landing_page_jaspr/components/footer.dart';
-import 'package:caza_de_casa_landing_page_jaspr/components/how_does_it_work.dart';
+import 'pages/landing.dart';
+import 'pages/tos.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_router/jaspr_router.dart';
 
-import 'components/apartment_photo.dart';
-import 'components/intro.dart';
+import 'components/header.dart';
+import 'components/footer.dart';
+import 'pages/privacy.dart';
+import 'state/theme_state.dart';
 
-// A simple [StatelessComponent] with a [build] method.
-@client
-class App extends StatelessComponent {
+class App extends StatefulComponent {
+  const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  bool _isDarkMode = true;
+
+  void _toggleTheme(bool value) {
+    setState(() {
+      _isDarkMode = value;
+    });
+  }
+
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'flex flex-col bg-surface h-screen lg:min-h-screen', [
-      div(classes: 'flex flex-col lg:flex-row h-full lg:h-full lg:items-center lg:justify-center', [
-        const ApartmentPhoto(),
-        const Intro(),
-      ]),
-      const HowDoesItWork(),
-      const Footer(),
-    ]);
+    yield ThemeState(
+      isDarkMode: _isDarkMode,
+      toggleTheme: _toggleTheme,
+      child: div(
+        classes:
+            'min-h-screen ${_isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'} flex flex-col',
+        [
+          Router(routes: [
+            ShellRoute(
+              builder: (context, state, child) => Fragment(children: [
+                div(classes: 'fixed top-0 left-0 right-0 z-10', [
+                  const Header(),
+                ]),
+                div(classes: 'flex-grow pt-24', [
+                  child,
+                ]),
+                const Footer(),
+              ]),
+              routes: [
+                Route(
+                    path: '/',
+                    title: 'Home',
+                    builder: (context, state) => const LandingPage()),
+                Route(
+                    path: '/privacy',
+                    title: 'Privacy Policy',
+                    builder: (context, state) => const PrivacyPolicyPage()),
+                Route(
+                    path: '/tos',
+                    title: 'Terms of Service',
+                    builder: (context, state) => const TermsOfServicePage()),
+              ],
+            ),
+          ]),
+        ],
+      ),
+    );
   }
 }
