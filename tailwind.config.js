@@ -10,11 +10,9 @@ module.exports = {
             backgroundColor: '#000000',
             backgroundImage: {
                 'apartment-a-small': "url('/src/img/a-smaller.jpg')",
+                'home': "url('/src/img/home.png')"
             }
         },
     },
-    plugins: [
-        // require('@tailwindcss/forms'),
-        // require('daisyui')
-    ],
+    plugins: [],
 }
