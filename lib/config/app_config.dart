@@ -11,9 +11,7 @@ class AppConfig {
 
   static const String heroTitle = 'Caza de Casa';
   static const String heroSubtitle = 'Helping you find the best furnished apartments in Medellín';
-  static const String heroImage = 'https://placehold.co/640x1386?text=App+Screenshot';
-
-  static const String heroImage2 = 'images/home.png';
+  static const String heroImage = 'images/home.png';
 
   static const String featuresTitle = 'Features';
   static const String featuresSubtitle = 'Everything you need';

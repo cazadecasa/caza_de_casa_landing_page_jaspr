@@ -28,9 +28,9 @@ class LandingPage extends StatelessComponent {
           // App showcase (iPhone frame) for original layout
           if (!AppConfig.useAlternativeFeatureLayout)
             div(classes: 'mt-16 max-w-lg mx-auto', [
-              div(classes: 'pixel-mask', [
+              div(classes: 'iphone16-pro-max-mask', [
                 img(
-                    src: AppConfig.heroImage2,
+                    src: AppConfig.heroImage,
                     alt: 'App Screenshot',
                     classes: 'w-full h-auto'),
               ]),
