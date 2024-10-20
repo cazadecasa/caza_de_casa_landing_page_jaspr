@@ -10,38 +10,39 @@ class AppConfig {
   };
 
   static const String heroTitle = 'Caza de Casa';
-  static const String heroSubtitle = 'Helping you find the best furnished apartments in Medellín';
+  static const String heroSubtitle = 'Helping you find a place to call home in Medellín';
   static const String heroImage = 'images/home.png';
 
-  static const String featuresTitle = 'Features';
-  static const String featuresSubtitle = 'Everything you need';
+  static const String featuresTitle = '';
+  static const String featuresSubtitle = 'Why choose Caza de Casa?';
   static const String featuresDescription =
-      'We wanted to make finding a furnished apartment in Medellín easy';
+      '';
 
   static const List<Feature> features = [
     Feature(
-      title: '"I am paying how much for cleaning?!"',
+      title: 'Pay Less',
       description:
-          'We charge no fees. Giving you the best prices. Time to stop paying huge amounts on "cleaning" and "service" fees.',
+          'We add 0% on top of the total. Other platforms add up to an additional 15% on top of the total to take for themselves.',
       icon: '💰',
     ),
     Feature(
-      title: '"Where did I see that apartment?"',
+      title: 'Favourites',
       description:
-          'It\'s frustrating not remembering where you had seen an apartment. Don\'t worry, give your favourite apartments a heart and easily find it in your favourites later.',
+          'Seen a home you like the look of? Tap the heart icon to add a home to your favourites so you can come back to it later.',
       icon: '❤️',
     ),
     Feature(
-      title: '"I would love to see what is nearby"',
+      title: 'Preferred Features',
       description:
-          'Wanting to check out what is close to the apartment? Tap on the map and we\'ll show you the area it is in.',
-      icon: '📍',
+          'Add your feature preferences for your ideal home and see at a glance which features are included with '
+              'each listing.',
+      icon: '🏡',
     ),
     Feature(
-      title: '"But does it have a sauna?"',
+      title: 'Filters',
       description:
-          'Maybe. Maybe not. If it does you will see it listed in the apartments feature section.',
-      icon: '✅',
+          'Find the homes within your price range. Search for the homes which have the right amount of bedrooms and bathrooms.',
+      icon: '🏷️',
     ),
   ];
 
