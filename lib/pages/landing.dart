@@ -32,7 +32,7 @@ class LandingPage extends StatelessComponent {
                 img(
                     src: AppConfig.heroImage,
                     alt: 'App Screenshot',
-                    classes: 'w-full h-auto'),
+                    classes: 'w-[320px] h-[700px]'),
               ]),
             ]),
         ],
@@ -117,7 +117,7 @@ class LandingPage extends StatelessComponent {
             ),
             p(
               classes:
-                  'mt-4 max-w-2xl text-xl ${themeState.isDarkMode ? 'text-gray-300' : 'text-gray-500'} lg:mx-auto',
+                  'mt-2 max-w-2xl text-xl ${themeState.isDarkMode ? 'text-gray-300' : 'text-gray-500'} lg:mx-auto',
               [text(AppConfig.featuresDescription)],
             ),
           ]),
@@ -189,7 +189,7 @@ class LandingPage extends StatelessComponent {
       div([
         div(
           classes:
-              'absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white',
+              'absolute flex items-center justify-center mt-2 h-12 w-12 rounded-md bg-indigo-500 text-white',
           [
             span(classes: 'text-2xl', [text(feature.icon)]),
           ],
@@ -202,7 +202,7 @@ class LandingPage extends StatelessComponent {
           ),
           p(
             classes:
-                'mt-2 text-base ${themeState.isDarkMode ? 'text-gray-300' : 'text-gray-500'}',
+                'text-base ${themeState.isDarkMode ? 'text-gray-300' : 'text-gray-500'}',
             [text(feature.description)],
           ),
         ]),
