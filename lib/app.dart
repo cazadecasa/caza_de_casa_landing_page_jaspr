@@ -1,11 +1,11 @@
-import 'pages/landing.dart';
-import 'pages/tos.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
-import 'components/header.dart';
 import 'components/footer.dart';
+import 'components/header.dart';
+import 'pages/landing.dart';
 import 'pages/privacy.dart';
+import 'pages/tos.dart';
 import 'state/theme_state.dart';
 
 class App extends StatefulComponent {
@@ -33,33 +33,32 @@ class _AppState extends State<App> {
         classes:
             'min-h-screen ${_isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'} flex flex-col',
         [
-          Router(routes: [
-            ShellRoute(
-              builder: (context, state, child) => Fragment(children: [
-                div(classes: 'fixed top-0 left-0 right-0 z-10', [
-                  const Header(),
+          Router(
+            routes: [
+              ShellRoute(
+                builder: (context, state, child) => Fragment(children: [
+                  div(classes: 'fixed top-0 left-0 right-0 z-10', [
+                    const Header(),
+                  ]),
+                  div(classes: 'flex-grow pt-24', [
+                    child,
+                  ]),
+                  const Footer(),
                 ]),
-                div(classes: 'flex-grow pt-24', [
-                  child,
-                ]),
-                const Footer(),
-              ]),
-              routes: [
-                Route(
-                    path: '/',
-                    title: 'Home',
-                    builder: (context, state) => const LandingPage()),
-                Route(
-                    path: '/privacy',
-                    title: 'Privacy Policy',
-                    builder: (context, state) => const PrivacyPolicyPage()),
-                Route(
-                    path: '/tos',
-                    title: 'Terms of Service',
-                    builder: (context, state) => const TermsOfServicePage()),
-              ],
-            ),
-          ]),
+                routes: [
+                  Route(path: '/', title: 'Home', builder: (context, state) => const LandingPage()),
+                  Route(
+                      path: '/privacy',
+                      title: 'Privacy Policy',
+                      builder: (context, state) => const PrivacyPolicyPage()),
+                  Route(
+                      path: '/tos',
+                      title: 'Terms of Service',
+                      builder: (context, state) => const TermsOfServicePage()),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );
