@@ -11,6 +11,7 @@ class FacebookIcon extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield SocialMediaIcon(
       data: _svgData,
+      ariaLabel: 'Caza de Casa Facebook account',
       href: 'https://www.facebook.com/profile.php?id=61566610873540',
     );
   }

@@ -2,9 +2,10 @@ import 'package:caza_de_casa_landing_page_jaspr/state/theme_state.dart';
 import 'package:jaspr/jaspr.dart';
 
 class SocialMediaIcon extends StatelessComponent {
-  const SocialMediaIcon({super.key, required this.data, this.href});
+  const SocialMediaIcon({super.key, required this.data,required this.ariaLabel, this.href});
 
   final String data;
+  final String ariaLabel;
   final String? href;
 
   @override
@@ -39,6 +40,7 @@ class SocialMediaIcon extends StatelessComponent {
         )
       ],
       href: href ?? '#',
+      attributes: {'aria-label': ariaLabel},
       target: Target.blank,
       classes: classes,
     );
